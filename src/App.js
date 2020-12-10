@@ -1,7 +1,7 @@
 import React, { useState, useEffect} from "react";
 import "./App.css";
 import axios from 'axios';
-import Video from './components/video'
+import Media from './components/Media'
 
 
 
@@ -29,7 +29,7 @@ function App() {
 
   return (
     <div className="App">
-      <Video nasaData={nasaData}/>
+      <Media nasaData={nasaData}/>
       <h2 id="date">{nasaData.date}</h2>
       <p id="mediaDescription">
         {nasaData.explanation} <span role="img" aria-label='go!'>🚀</span>
