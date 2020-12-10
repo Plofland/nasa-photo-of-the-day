@@ -1,7 +1,7 @@
 import React, { useState, useEffect} from "react";
 import "./App.css";
 import axios from 'axios';
-// import video from './components/video'
+import Video from './components/video'
 
 
 
@@ -29,10 +29,10 @@ function App() {
 
   return (
     <div className="App">
-      <Video />
+      <Video nasaData={nasaData}/>
       <h2 id="date">{nasaData.date}</h2>
       <p id="mediaDescription">
-        {nasaData.explanation} <span role="img" aria-label='go!'>🚀</span>!
+        {nasaData.explanation} <span role="img" aria-label='go!'>🚀</span>
       </p>
       <a href="https://www.nasa.gov/multimedia/imagegallery/iotd.html">Want to see more images from NASA?</a>
     </div>
