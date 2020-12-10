@@ -2,7 +2,7 @@ import React from 'react'
 import style from './style'
 
 export default function Media(props) {
-    const { nasaData, style } = props;
+    const { nasaData } = props;
     if(nasaData.media_type === "image"){
         return (
             <StyledMedia id="nasaVideo">
@@ -24,5 +24,10 @@ export default function Media(props) {
 const StyledMedia = style.div`
     size: ${style.media.size};
     margin: ${style.media.margin}
-    
+    h1 {
+        background-image: ${style.header.headerBackground};
+        border: ${style.header.border};
+        border-radius: ${style.header.borderRadius};
+        color: ${style.header.color};
+      }
 `;

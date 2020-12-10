@@ -2,13 +2,13 @@ import React, { useState, useEffect} from "react";
 import "./App.css";
 import axios from 'axios';
 import Media from './components/Media'
-
+import style from './components/style'
 
 
 const apiKey = "kMJxIqquK5i6SOwPNZZyTjGxEPO1bnf7AdbIY2MA"
 const baseUrl = "https://api.nasa.gov/planetary/apod?api_key="
 
-function App({style}) {
+function App() {
 
   const [nasaData, setNasaData] = useState({})
   
@@ -28,25 +28,24 @@ function App({style}) {
   
 
   return (
-    <StyleApp className="App">
+    <StyledApp className="App">
       <Media nasaData={nasaData} style={style}/>
       <h2 id="date">{nasaData.date}</h2>
       <p id="mediaDescription">
         {nasaData.explanation} <span role="img" aria-label='go!'>🚀</span>
       </p>
       <a href="https://www.nasa.gov/multimedia/imagegallery/iotd.html">Want to see more images from NASA?</a>
-    </StyleApp>
+    </StyledApp>
   );
 }
 
 export default App;
 
-const StyleApp = style.div`
-  background-color: ${style.backgroundColor}
-  color: ${style.textColor}
+const StyledApp = style.div`
+  background-color: ${style.backgroundColor};
+  color: ${style.textColor};
+  font-family: ${style.fontFamily};
   h2 {
-    background-image: ${style.header.headerBackground};
-    border: ${style.header.border};
-    border-radius: ${style.header.borderRadius};
-  }
+    
+  };
 `
