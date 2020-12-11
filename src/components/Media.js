@@ -1,5 +1,6 @@
 import React from 'react'
 import style from './style'
+import styled from 'styled-components'
 
 export default function Media(props) {
     const { nasaData } = props;
@@ -21,11 +22,11 @@ export default function Media(props) {
     }
 }
 
-const StyledMedia = style.div`
+const StyledMedia = styled.div`
     size: ${style.media.size};
-    margin: ${style.media.margin}
+    /* margin: ${style.media.margin} */
     h1 {
-        background-image: ${style.header.headerBackground};
+        /* background-imasge: ${style.header.headerBackground}; */
         border: ${style.header.border};
         border-radius: ${style.header.borderRadius};
         color: ${style.header.color};

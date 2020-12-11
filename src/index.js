@@ -7,7 +7,7 @@ import style from "./components/style";
 
 
 ReactDOM.render(
-    <ThemeProvider style={style}>
+    <ThemeProvider theme={style}>
         <App />
     </ThemeProvider>, 
     document.getElementById("root")

@@ -3,6 +3,7 @@ import "./App.css";
 import axios from 'axios';
 import Media from './components/Media'
 import style from './components/style'
+import styled from 'styled-components'
 
 
 const apiKey = "kMJxIqquK5i6SOwPNZZyTjGxEPO1bnf7AdbIY2MA"
@@ -41,10 +42,11 @@ function App() {
 
 export default App;
 
-const StyledApp = style.div`
+const StyledApp = styled.div`
   background-color: ${style.backgroundColor};
   color: ${style.textColor};
   font-family: ${style.fontFamily};
+  width: ${style.media.width};
   h2 {
     
   };
