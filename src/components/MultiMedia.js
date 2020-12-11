@@ -2,7 +2,7 @@ import React from 'react'
 import style from './style'
 import styled from 'styled-components'
 
-export default function Media(props) {
+export default function MultiMedia(props) {
     const { nasaData } = props;
     if(nasaData.media_type === "image"){
         return (
@@ -23,12 +23,18 @@ export default function Media(props) {
 }
 
 const StyledMedia = styled.div`
-    size: ${style.media.size};
-    /* margin: ${style.media.margin} */
+    img {
+        width: ${style.multiMedia.width};
+        margin: ${style.multiMedia.margin}
+    }
+    
+    margin: ${style.multiMedia.margin};
     h1 {
-        /* background-imasge: ${style.header.headerBackground}; */
-        border: ${style.header.border};
-        border-radius: ${style.header.borderRadius};
-        color: ${style.header.color};
+        /* background-image: ${style.h1.Background}; */
+        font-size: ${style.h1.fontSize};
+        /* border: ${style.h1.border};
+        border-radius: ${style.h1.borderRadius}; */
+        color: ${style.h1.color};
+        margin: ${style.h1.margin};
       }
 `;

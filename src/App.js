@@ -1,7 +1,7 @@
 import React, { useState, useEffect} from "react";
 import "./App.css";
 import axios from 'axios';
-import Media from './components/Media'
+import MultiMedia from './components/MultiMedia'
 import style from './components/style'
 import styled from 'styled-components'
 
@@ -30,7 +30,7 @@ function App() {
 
   return (
     <StyledApp className="App">
-      <Media nasaData={nasaData} style={style}/>
+      <MultiMedia nasaData={nasaData} style={style}/>
       <h2 id="date">{nasaData.date}</h2>
       <p id="mediaDescription">
         {nasaData.explanation} <span role="img" aria-label='go!'>🚀</span>
@@ -43,11 +43,20 @@ function App() {
 export default App;
 
 const StyledApp = styled.div`
+  
   background-color: ${style.backgroundColor};
   color: ${style.textColor};
   font-family: ${style.fontFamily};
-  width: ${style.media.width};
+  font-size: ${style.fontSize};
+  width: ${style.multiMedia.width};
+  text-align: ${style.textAlign};
+  border-radius: ${style.borderRadius};
+  margin: ${style.margin};
   h2 {
-    
+    font-size: ${style.h2.fontSize};
   };
+  p {
+    font-size: ${style.p.fontSize};
+    margin: ${style.p.margin};
+  }
 `
